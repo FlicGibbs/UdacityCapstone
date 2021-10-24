@@ -1,0 +1,1 @@
+truffle test eth-contracts/test/TestERC721Mintable.js
