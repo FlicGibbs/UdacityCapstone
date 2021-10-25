@@ -11,7 +11,7 @@ contract('TestERC721Mintable', accounts => {
     var contract;
 
     before('setup contract', async () => {
-        contract = await ERC721Mintable.new({from: contractOwnerAccount});
+        contract = await ERC721Mintable.new(name, symbol, baseTokenURI, {from: contractOwnerAccount});
     });
 
     it('should mint multiple tokens', async function() {
@@ -75,7 +75,7 @@ contract('TestERC721Mintable', accounts => {
 
     describe('have ownership properties', async () => {
         beforeEach(async function () { 
-            contract = await ERC721Mintable.new({from: contractOwnerAccount});
+            contract = await ERC721Mintable.new(name, symbol, baseTokenURI, {from: contractOwnerAccount});
         })
 
         it('should fail when minting when address is not contract owner', async function () { 
@@ -83,7 +83,7 @@ contract('TestERC721Mintable', accounts => {
                 let result = await contract.mint(testAccount1, 10, {from: testAccount2})
                 assert(1, 0, 'Should fail when minting address not the contract owner');
             } catch(error) {
-                console.log(error);
+                //console.log(error);
                 assert(1, 1, 'Failed as expected');
             }
         })
