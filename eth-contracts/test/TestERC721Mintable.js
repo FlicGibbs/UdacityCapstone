@@ -10,8 +10,12 @@ contract('TestERC721Mintable', accounts => {
     var tokenNames = [tokensToMint];
     var contract;
 
+    var tokenName = "Flic's Non-fungible tokens";
+    var symbol = "FNFT";
+    var baseTokenURI = "https://s3-us-west-2.amazonaws.com/udacity-blockchain/capstone/";
+
     before('setup contract', async () => {
-        contract = await ERC721Mintable.new(name, symbol, baseTokenURI, {from: contractOwnerAccount});
+        contract = await ERC721Mintable.new(tokenName, symbol, baseTokenURI, {from: contractOwnerAccount});
     });
 
     it('should mint multiple tokens', async function() {
@@ -75,7 +79,7 @@ contract('TestERC721Mintable', accounts => {
 
     describe('have ownership properties', async () => {
         beforeEach(async function () { 
-            contract = await ERC721Mintable.new(name, symbol, baseTokenURI, {from: contractOwnerAccount});
+            contract = await ERC721Mintable.new(tokenName, symbol, baseTokenURI, {from: contractOwnerAccount});
         })
 
         it('should fail when minting when address is not contract owner', async function () { 

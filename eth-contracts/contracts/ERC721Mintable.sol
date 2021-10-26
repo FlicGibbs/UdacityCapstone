@@ -25,10 +25,10 @@ contract Ownable {
     event OwnershipTransferred(address newOwner); //  5) create an event that emits anytime ownerShip is transfered (including in the constructor)
 
     constructor () internal { //  2) create an internal constructor that sets the _owner var to the creater of the contract 
-        transferOwnership(msg.sender);
+        _owner = msg.sender;
     }
 
-    function transferOwnership(address newOwner) public { // TODO onlyOwner { //  4) fill out the transferOwnership function
+    function transferOwnership(address newOwner) public onlyOwner { //  4) fill out the transferOwnership function
         // TODO add functionality to transfer control of the contract to a newOwner.
         // make sure the new owner is a real address
         require(newOwner != address(0), "Ownable: Invalid transfer address");
@@ -532,14 +532,17 @@ contract ERC721Metadata is ERC721Enumerable, usingOraclize {
 //      -returns a true boolean upon completion of the function
 //      -calls the superclass mint and setTokenURI functions
 contract ERC721Mintable is ERC721Metadata {
-    string constant private _name = "Flic's Non-fungible tokens";
-    string constant private _symbol = "FNFT";
-    string constant private _baseTokenURI = "https://s3-us-west-2.amazonaws.com/udacity-blockchain/capstone/";
+    string private _name;
+    string private _symbol;
+    string private _baseTokenURI;
 
-    constructor () ERC721Metadata(_name, _symbol, _baseTokenURI) public {
+    constructor (string memory name, string memory symbol, string memory baseTokenURI) ERC721Metadata(_name, _symbol, _baseTokenURI) public {
+        _name = name;
+        _symbol = symbol;
+        _baseTokenURI = baseTokenURI;
     }
 
-    function mint(address to, uint256 tokenId) public  returns (bool) { // TODO onlyOwner
+    function mint(address to, uint256 tokenId) public onlyOwner returns (bool) { 
         super._mint(to, tokenId);
         super._setTokenURI(tokenId);
         return true;

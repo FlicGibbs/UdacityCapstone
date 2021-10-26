@@ -3,15 +3,10 @@ var Verifier = artifacts.require('SquareVerifier.sol');
 
 var fs = require('fs');
 
-contract('Verifier', accounts => {
+contract('SquareVerifier', accounts => {
     const proofJson = fs.readFileSync("../zokrates/code/square/proof.json").toString().trim();
 
     const contractOwnerAccount = accounts[0];
-    const testAccount1 = accounts[1];
-    const testAccount2 = accounts[2];
-
-    const tokensToMint = 4;
-    var tokenNames = [tokensToMint];
     var contract;
     var proof = JSON.parse(proofJson);;
 

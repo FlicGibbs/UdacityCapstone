@@ -194,6 +194,7 @@ contract SquareVerifier {
             uint[2] memory c,
             uint[2] memory input
         ) public view returns (bool r) {
+        // Got the next 4 lines from: https://github-dotcom.gateway.web.tr/Jatin-8898/ud-blockchain-nd/blob/master/Blockchain%20Capstone/eth-contracts/contracts/verifier.sol
         Proof memory proof;
         proof.a = Pairing.G1Point(a[0], a[1]);
         proof.b = Pairing.G2Point([b[0][0], b[0][1]], [b[1][0], b[1][1]]);

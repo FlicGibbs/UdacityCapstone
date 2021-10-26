@@ -1,5 +1,5 @@
-
-var ERC721Mintable = artifacts.require("ERC721Mintable");
+/*
+//var ERC721Mintable = artifacts.require("ERC721Mintable");
 //var BigNumber = require('bignumber.js');
 
 var Config = async function(accounts) {
@@ -64,13 +64,12 @@ var Config = async function(accounts) {
 
     return {
         owner: owner,
-        //firstAirline: firstAirline,
-        //weiMultiple: (new BigNumber(10)).pow(18),
         testAddresses: testAddresses,
-        erc721Mintable: erc721Mintable
+        //erc721Mintable: erc721Mintable
     }
 }
 
 module.exports = {
     Config: Config
 };
+*/
