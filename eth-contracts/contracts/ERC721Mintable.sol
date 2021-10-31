@@ -532,14 +532,16 @@ contract ERC721Metadata is ERC721Enumerable, usingOraclize {
 //      -returns a true boolean upon completion of the function
 //      -calls the superclass mint and setTokenURI functions
 contract ERC721Mintable is ERC721Metadata {
-    string private _name;
-    string private _symbol;
-    string private _baseTokenURI;
-
-    constructor (string memory name, string memory symbol, string memory baseTokenURI) ERC721Metadata(_name, _symbol, _baseTokenURI) public {
-        _name = name;
-        _symbol = symbol;
-        _baseTokenURI = baseTokenURI;
+    // string private _name;
+    // string private _symbol;
+    // string private _baseTokenURI;
+//ERC721Metadata(_name, _symbol, _baseTokenURI) 
+    constructor (string memory name, string memory symbol, string memory baseTokenURI) 
+        ERC721Metadata(name, symbol, baseTokenURI) 
+        public {
+        // _name = name;
+        // _symbol = symbol;
+        // _baseTokenURI = baseTokenURI;
     }
 
     function mint(address to, uint256 tokenId) public onlyOwner returns (bool) { 

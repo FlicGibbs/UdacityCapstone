@@ -18,6 +18,13 @@ contract('TestERC721Mintable', accounts => {
         contract = await ERC721Mintable.new(tokenName, symbol, baseTokenURI, {from: contractOwnerAccount});
     });
 
+    it('should return symbol', async function () { 
+
+        let _symbol = await contract.symbol();
+        console.log("Symbol:", _symbol);  
+        assert.equal(symbol, _symbol, "Symbol should return what was sent");
+    })
+
     it('should mint multiple tokens', async function() {
         // mint multiple tokens            
         for (var i=0; i<tokensToMint; i++) {
