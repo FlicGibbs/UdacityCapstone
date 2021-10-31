@@ -6,15 +6,15 @@
 
 TestERC721Mintable
 
-![TestErc721Mintable](https://github.com/FlicGibbs/UdacityCapstone/tree/main/assets/TestErc721Mintable.png)
+![TestErc721Mintable](/assets/TestErc721Mintable.png)
 
 TestSquareVerifier
 
-![TestSquareVerifier](https://github.com/FlicGibbs/UdacityCapstone/tree/main/assets/TestSquareVerifier.png)
+![TestSquareVerifier](/assets/TestSquareVerifier.png)
 
 TestSolnSquareVerifier
 
-![TestSolnSquareVerifier](https://github.com/FlicGibbs/UdacityCapstone/tree/main/assets/TestSolnSquareVerifier.png)
+![TestSolnSquareVerifier](/assets/TestSolnSquareVerifier.png)
 
 ## Deployment:
 > **To Migrate:** Run **truffle migrate --network rinkeby** (with optional **--reset**)
@@ -86,7 +86,7 @@ Starting migrations...
 ## Interact with Contract
 
  ### SolnSquareVerifier abi:
- ![Mint Token](https://github.com/FlicGibbs/UdacityCapstone/blob/main/assets/Mint%20Token%202.png)
+ ![Mint Token](/assets/Mint%20Token%202.png)
   <details>
   <summary>Click to view abi</summary>
 
@@ -881,7 +881,7 @@ SolnSquareVerifier Address: 0xDbeD88340D236bCEb36a1BBACeD452209F51Fa88
 ## OpenSea Collection
 > **Hamlet Homes:** https://testnets.opensea.io/collection/hamlet-homes
 
-![Hamlet Homes](https://github.com/FlicGibbs/UdacityCapstone/blob/main/assets/OpenSea%20for%20sale.png)
+![Hamlet Homes](/assets/OpenSea%20for%20sale.png)
 
 |Token ID | Listing | Buy back transaction|
 |--|--|--|
