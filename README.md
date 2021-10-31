@@ -3,21 +3,28 @@
 > **To Test:** Run **truffle test** from the eth-contracts folder
 > 
 ### Test Results:
+
 TestERC721Mintable
-![TestErc721Mintable](https://github.com/FlicGibbs/UdacityCapstone/tree/main/assets/TestErc721Mintable.png )
+
+![TestErc721Mintable](https://github.com/FlicGibbs/UdacityCapstone/tree/main/assets/TestErc721Mintable.png)
 
 TestSquareVerifier
+
 ![TestSquareVerifier](https://github.com/FlicGibbs/UdacityCapstone/tree/main/assets/TestSquareVerifier.png)
 
 TestSolnSquareVerifier
+
 ![TestSolnSquareVerifier](https://github.com/FlicGibbs/UdacityCapstone/tree/main/assets/TestSolnSquareVerifier.png)
 
 ## Deployment:
 > **To Migrate:** Run **truffle migrate --network rinkeby** (with optional **--reset**)
 
 **ERC721Mintable contract address**: *0x1a1BdE7D96bf13d07dB92BB5C594C19e64449Ce1*
+
 **SquareVerifier contract address**: *0x9302d307299f2daD228B24EF3eac9Fb6b8A3F11C*
+
 **SolnSquareVerifier contract address**: *0xD096f8D4579265454673a0cAaf13f54BE2d083C9*
+
 <details>
   <summary>Click to see migration results</summary>
   
@@ -81,7 +88,7 @@ Starting migrations...
  ### SolnSquareVerifier abi:
  ![Mint Token](https://github.com/FlicGibbs/UdacityCapstone/blob/main/assets/Mint%20Token%202.png)
   <details>
-  <summary>Click to view</summary>
+  <summary>Click to view abi</summary>
 
  ```
  [
